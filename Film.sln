@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Film.WEB", "Film.WEB\Film.WEB.csproj", "{4E1EFE36-4338-44F9-BBB5-A37FDD3181DD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Film.BLL", "Film.BLL\Film.BLL.csproj", "{CAD8D825-90FB-47AB-B819-03704324DAA3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Film.DAL", "Film.DAL\Film.DAL.csproj", "{07010370-84FE-40D7-A54A-B172F1896CF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E1EFE36-4338-44F9-BBB5-A37FDD3181DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E1EFE36-4338-44F9-BBB5-A37FDD3181DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E1EFE36-4338-44F9-BBB5-A37FDD3181DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E1EFE36-4338-44F9-BBB5-A37FDD3181DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAD8D825-90FB-47AB-B819-03704324DAA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAD8D825-90FB-47AB-B819-03704324DAA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAD8D825-90FB-47AB-B819-03704324DAA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAD8D825-90FB-47AB-B819-03704324DAA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07010370-84FE-40D7-A54A-B172F1896CF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07010370-84FE-40D7-A54A-B172F1896CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07010370-84FE-40D7-A54A-B172F1896CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07010370-84FE-40D7-A54A-B172F1896CF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F644E3AA-0603-4A78-B3D3-929C870FE7F3}
+	EndGlobalSection
+EndGlobal
