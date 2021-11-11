@@ -46,8 +46,8 @@ namespace Film.WEB
             services.AddDbContext<FilmContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")), ServiceLifetime.Scoped);
 
-            services.AddScoped<ICorezoidRepository, CorezoidRepository>();
-            services.AddScoped<IIMDbRepository, IMDbRepository>();
+            services.AddScoped<ICorezoidApiRepository, CorezoidApiRepository>();
+            services.AddScoped<IIMDbApiRepository, IMDbApiRepository>();
             services.AddScoped<ILastViewRepository, LastViewRepository>();
             services.AddScoped<IWatchlistRepository, WatchlistRepository>();
             services.AddScoped<IFilmService, FilmService>();

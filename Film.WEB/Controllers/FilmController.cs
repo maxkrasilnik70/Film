@@ -24,9 +24,9 @@ namespace Film.WEB.Controllers
         }
 
         [HttpGet("filmName/{filmTitle}")]
-        public List<SearchResultDto> GetFilmByName(string filmTitle)
+        public async Task<List<SearchResultDto>> GetFilmByNameAsync(string filmTitle)
         {
-            return _filmService.GetFilmByName(filmTitle);
+            return await _filmService.GetFilmByNameAsync(filmTitle);
         }
 
         [HttpPost("addToWatchlist")]

@@ -19,14 +19,14 @@ namespace Film.BLL.Services
 {
     public class FilmService : IFilmService
     {
-        private readonly IIMDbRepository _imdbRepository;
+        private readonly IIMDbApiRepository _imdbRepository;
         private readonly IWatchlistRepository _watchlistRepository;
         private readonly ILastViewRepository _lastViewRepository;
         private readonly IMapper _mapper;
-        private readonly ICorezoidRepository _corezoidRepository;
+        private readonly ICorezoidApiRepository _corezoidRepository;
 
-        public FilmService(IIMDbRepository imdbRepository, IWatchlistRepository watchlistRepository,
-            ILastViewRepository lastViewRepository, IMapper mapper, ICorezoidRepository corezoidRepository)
+        public FilmService(IIMDbApiRepository imdbRepository, IWatchlistRepository watchlistRepository,
+            ILastViewRepository lastViewRepository, IMapper mapper, ICorezoidApiRepository corezoidRepository)
         {
             _imdbRepository = imdbRepository;
             _watchlistRepository = watchlistRepository;
@@ -35,9 +35,9 @@ namespace Film.BLL.Services
             _corezoidRepository = corezoidRepository;
         }
 
-        public List<SearchResultDto> GetFilmByName(string filmTitle)
+        public async Task<List<SearchResultDto>> GetFilmByNameAsync(string filmTitle)
         {
-            var film = _imdbRepository.GetFilmByName(filmTitle);
+            var film = await _imdbRepository.GetFilmByNameAsync(filmTitle);
             var result = _mapper.Map<List<SearchResultDto>>(film);
             return result;
         }
@@ -55,7 +55,7 @@ namespace Film.BLL.Services
             var result = new List<SearchResultDto>();
             foreach (var film in films)
             {
-                var filmsResponse = _imdbRepository.GetAllFilmsByUserId(film.FilmId);
+                var filmsResponse = await _imdbRepository.GetAllFilmsByUserIdAsync(film.FilmId);
                 result.AddRange(_mapper.Map<List<SearchResultDto>>(filmsResponse));
             }
 
@@ -78,7 +78,7 @@ namespace Film.BLL.Services
             var titleData = new List<TitleData>();
             foreach (var w in watchlist)
             {
-                titleData.Add(_imdbRepository.GetHighestRatedFilm(w.FilmId));
+                titleData.Add(await _imdbRepository.GetHighestRatedFilmAsync(w.FilmId));
             }
 
             int titleDataCount = titleData.Count;

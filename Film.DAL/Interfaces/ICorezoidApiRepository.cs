@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Film.DAL.Interfaces
 {
-    public interface ICorezoidRepository
+    public interface ICorezoidApiRepository
     {
         public List<CountGenres> GetCountGenres(List<string> filmTitles);
     }

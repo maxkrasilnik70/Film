@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Film.DAL.API_Repositories
 {
-    public class CorezoidRepository : ICorezoidRepository
+    public class CorezoidApiRepository : ICorezoidApiRepository
     {
         public List<CountGenres> GetCountGenres(List<string> filmTitles)
         {

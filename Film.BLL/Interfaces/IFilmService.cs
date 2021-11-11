@@ -10,7 +10,7 @@ namespace Film.BLL.Interfaces
 {
     public interface IFilmService
     {
-        public List<SearchResultDto> GetFilmByName(string filmTitle);
+        public Task<List<SearchResultDto>> GetFilmByNameAsync(string filmTitle);
         public Task AddFilmToWatchlistAsync(WatchlistDto watchlistDto);
         public Task<List<SearchResultDto>> GetAllFilmsByUserIdAsync(int userId);
         public Task MakeFilmWatchedAsync(LastViewDto lastViewDto);
